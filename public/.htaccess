@@ -1,0 +1,31 @@
+# Omogućite PHP skripte u direktoriju
+AddType application/x-httpd-php .php
+
+# Omogućite rewrite engine (za Next.js export)
+RewriteEngine On
+
+# Postavite bazni direktorij ako je vaša stranica u poddirektoriju
+# RewriteBase /
+
+# Postavite zaglavlja za CORS (ako je potrebno)
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+    Header set Access-Control-Allow-Methods "POST, GET, OPTIONS"
+    Header set Access-Control-Allow-Headers "Content-Type"
+</IfModule>
+
+# Ako korisnik traži direktorij, preusmjerite na index.html
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^(.*)$ $1/index.html [L]
+
+# Ako datoteka ili direktorij ne postoje, preusmjerite na index.html (za Next.js client-side routing)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /index.html [L]
+
+# Postavke za PHP
+php_flag display_errors Off
+php_value upload_max_filesize 10M
+php_value post_max_size 10M
+php_value max_execution_time 300
+php_value max_input_time 300
