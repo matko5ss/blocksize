@@ -35,7 +35,7 @@ export default function Contact() {
         ? ""
         : window.location.origin;
 
-      const response = await fetch(`${baseUrl}/process-form.php`, {
+      const response = await fetch(`${baseUrl}/contact-form.php`, {
         method: "POST",
         body: formDataToSend,
       });
@@ -59,7 +59,7 @@ export default function Contact() {
         setSubmitStatus("success");
         setSubmitMessage(
           result.message ||
-          "Hvala na poruci! Email s potvrdom poslan je na vašu adresu."
+          "Hvala na poruci! Kontaktirat ćemo vas u najkraćem mogućem roku."
         );
         setFormData({ name: "", email: "", message: "" });
         if (formRef.current) {
