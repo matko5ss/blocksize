@@ -8,8 +8,8 @@ import Footer from "../components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Poslovna Stranica",
-  description: "Vaš poslovni partner za uspjeh",
+  title: "Blocksize d.o.o.",
+  description: "Vaš pouzdani partner u poslovanju već više od 10 godina",
 };
 
 export default function RootLayout({
