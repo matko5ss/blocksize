@@ -74,26 +74,30 @@ export default function Home() {
       </section>
 
       {/* Nova sekcija - Statistike */}
-      <section className="mb-12 bg-gray-50 p-8 rounded-lg">
+      <section className="mb-12 bg-gray-50 p-8 rounded-lg ">
         <h2 className="text-2xl font-semibold mb-8 text-center">
           Naši Uspjesi u Brojkama
         </h2>
-        <div className="grid md:grid-cols-4 gap-8 text-center">
-          <div>
+        <div className="flex flex-col gap-8 text-center ">
+          <div class="border border-slate-300 p-3 rounded-lg">
             <div className="text-4xl font-bold text-blue-600 mb-2">500+</div>
             <p className="text-gray-600">Zadovoljnih klijenata</p>
           </div>
-          <div>
+          <div class="border border-slate-300 p-3 rounded-lg">
             <div className="text-4xl font-bold text-blue-600 mb-2">1000+</div>
             <p className="text-gray-600">Završenih projekata</p>
           </div>
-          <div>
+          <div class="border border-slate-300 p-3 rounded-lg">
             <div className="text-4xl font-bold text-blue-600 mb-2">50+</div>
             <p className="text-gray-600">Stručnih zaposlenika</p>
           </div>
-          <div>
+          <div class="border border-slate-300 p-3 rounded-lg">
             <div className="text-4xl font-bold text-blue-600 mb-2">15+</div>
             <p className="text-gray-600">Godina iskustva</p>
+          </div>
+          <div class="border border-slate-300 p-3 rounded-lg">
+            <div className="text-4xl font-bold text-blue-600 mb-2">15+</div>
+            <p className="text-gray-600">Blocksize</p>
           </div>
         </div>
       </section>
