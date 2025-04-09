@@ -79,23 +79,23 @@ export default function Home() {
           Naši Uspjesi u Brojkama
         </h2>
         <div className="flex flex-col gap-8 text-center ">
-          <div class="border border-slate-300 p-3 rounded-lg">
+          <div className="border border-slate-300 p-3 rounded-lg">
             <div className="text-4xl font-bold text-blue-600 mb-2">500+</div>
             <p className="text-gray-600">Zadovoljnih klijenata</p>
           </div>
-          <div class="border border-slate-300 p-3 rounded-lg">
+          <div className="border border-slate-300 p-3 rounded-lg">
             <div className="text-4xl font-bold text-blue-600 mb-2">1000+</div>
             <p className="text-gray-600">Završenih projekata</p>
           </div>
-          <div class="border border-slate-300 p-3 rounded-lg">
+          <div className="border border-slate-300 p-3 rounded-lg">
             <div className="text-4xl font-bold text-blue-600 mb-2">50+</div>
             <p className="text-gray-600">Stručnih zaposlenika</p>
           </div>
-          <div class="border border-slate-300 p-3 rounded-lg">
+          <div className="border border-slate-300 p-3 rounded-lg">
             <div className="text-4xl font-bold text-blue-600 mb-2">15+</div>
             <p className="text-gray-600">Godina iskustva</p>
           </div>
-          <div class="border border-slate-300 p-3 rounded-lg">
+          <div className="border border-slate-300 p-3 rounded-lg">
             <div className="text-4xl font-bold text-blue-600 mb-2">15+</div>
             <p className="text-gray-600">Blocksize</p>
           </div>
