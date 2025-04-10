@@ -26,7 +26,7 @@ const Header = () => {
 
           {/* Desktop navigacija - vidljiva samo na md i većim ekranima */}
           <div className="hidden md:flex">
-            <button className="bg-white text-blue-600 hover:bg-blue-100 font-medium py-2 px-4 rounded-lg shadow">
+            <button className="bg-white text-blue-600 hover:bg-blue-100 font-medium px-4 py-2 border border-blue-600 rounded-[20px] shadow">
               Get in touch!
             </button>
           </div>
