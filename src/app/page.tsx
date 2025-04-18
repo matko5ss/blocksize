@@ -16,7 +16,7 @@ export default function Home() {
                   px-4 
                   py-8 
                   min-w-[220px] 
-                  min-h-[600px] 
+                  min-h-[600px]  
                   bg-[url('/images/background-3.jpg')] 
                   bg-fill 
                   bg-center 
