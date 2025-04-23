@@ -10,9 +10,9 @@ export default function Contact() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState("");
-  const [submitStatus, setSubmitStatus] = useState<
-    "success" | "error" | null
-  >(null);
+  const [submitStatus, setSubmitStatus] = useState<"success" | "error" | null>(
+    null
+  );
   const formRef = useRef<HTMLFormElement>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -31,9 +31,8 @@ export default function Contact() {
 
       // Prilagodimo URL za lokalno testiranje vs. produkciju
       // Na produkciji, PHP skripta je u root direktoriju
-      const baseUrl = window.location.hostname === "localhost"
-        ? ""
-        : window.location.origin;
+      const baseUrl =
+        window.location.hostname === "localhost" ? "" : window.location.origin;
 
       const response = await fetch(`${baseUrl}/contact-form.php`, {
         method: "POST",
@@ -59,7 +58,7 @@ export default function Contact() {
         setSubmitStatus("success");
         setSubmitMessage(
           result.message ||
-          "Hvala na poruci! Kontaktirat ćemo vas u najkraćem mogućem roku."
+            "Hvala na poruci! Kontaktirat ćemo vas u najkraćem mogućem roku."
         );
         setFormData({ name: "", email: "", message: "" });
         if (formRef.current) {
@@ -69,7 +68,7 @@ export default function Contact() {
         setSubmitStatus("error");
         setSubmitMessage(
           result.message ||
-          "Došlo je do greške prilikom slanja poruke. Molimo pokušajte ponovno."
+            "Došlo je do greške prilikom slanja poruke. Molimo pokušajte ponovno."
         );
       }
     } catch (error) {
@@ -134,7 +133,12 @@ export default function Contact() {
             )}
             <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
               {/* Skriveno anti-spam polje */}
-              <input type="text" name="honeypot" className="hidden" tabIndex={-1} />
+              <input
+                type="text"
+                name="honeypot"
+                className="hidden"
+                tabIndex={-1}
+              />
               <div>
                 <label
                   htmlFor="name"
