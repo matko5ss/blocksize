@@ -39,7 +39,7 @@ export default function Contact() {
         body: formDataToSend,
       });
 
-      // U slučaju da server ne vrati  JSON (npr. PHP greška)
+      // U slučaju da server ne vrati JSON (npr. PHP greška)
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
